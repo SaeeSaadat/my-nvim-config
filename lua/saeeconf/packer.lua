@@ -20,6 +20,8 @@ return require('packer').startup(function(use)
 
   use 'nvim-tree/nvim-tree.lua'
 
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+
   -- use({'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'})
   -- use({'neovim/nvim-lspconfig'})
   -- use({'hrsh7th/nvim-cmp'})
