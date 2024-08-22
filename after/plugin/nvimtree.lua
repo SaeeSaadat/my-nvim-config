@@ -5,31 +5,6 @@ vim.g.loaded_netrwPlugin = 1
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
 
--- OR setup with some options
-require("nvim-tree").setup({
-    on_attach = on_attach,
-    actions = {
-        open_file = {
-            quit_on_open = true
-        },
-    },
-    sort = {
-        sorter = "case_sensitive",
-    },
-    view = {
-        width = 30,
-    },
-    renderer = {
-        group_empty = true,
-    },
-    filters = {
-        dotfiles = true,
-    },
-})
-
-vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<cr>', {silent = true, noremap = true})
-vim.keymap.set('n', '<leader>e', ':NvimTreeFocus<cr>', {silent = true, noremap = true})
-
 local function on_attach(bufnr)
     local api = require('nvim-tree.api')
 
@@ -38,8 +13,8 @@ local function on_attach(bufnr)
     end
 
     -- My Stuff
-    -- vim.keymap.set('n', '<Esc>', 
 
+    vim.keymap.set('n', '<Esc>',     api.tree.close,                        opts('Close'))
     -- Default mappings. Feel free to modify or remove as you wish.
     --
     -- BEGIN_DEFAULT_ON_ATTACH
@@ -130,3 +105,31 @@ local function on_attach(bufnr)
     vim.keymap.set('n', 'Z', api.node.run.system, opts('Run System'))
 
 end
+
+
+-- OR setup with some options
+require("nvim-tree").setup({
+    on_attach = on_attach,
+    actions = {
+        open_file = {
+            quit_on_open = true
+        },
+    },
+    sort = {
+        sorter = "case_sensitive",
+    },
+    view = {
+        width = 30,
+    },
+    renderer = {
+        group_empty = true,
+    },
+    filters = {
+        dotfiles = true,
+    },
+})
+
+vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<cr>', {silent = true, noremap = true})
+vim.keymap.set('n', '<leader>e', ':NvimTreeFocus<cr>', {silent = true, noremap = true})
+
+

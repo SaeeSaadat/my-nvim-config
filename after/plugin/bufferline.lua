@@ -110,4 +110,4 @@ bufferline.setup {
 
 vim.keymap.set("n", "<tab>", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<S-tab>", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
-
+vim.keymap.set("n", "<leader>x", ":bd<CR>", { noremap = true, silent = true })
