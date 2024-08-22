@@ -12,6 +12,8 @@ return require('packer').startup(function(use)
 
   use 'scottmckendry/cyberdream.nvim'
 
+  use 'Vimjas/vim-python-pep8-indent'
+
   use 'navarasu/onedark.nvim'
 
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
