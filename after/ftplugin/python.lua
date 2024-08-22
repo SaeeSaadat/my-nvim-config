@@ -7,3 +7,5 @@ vim.opt.cindent=true
 vim.opt.colorcolumn="79"
 vim.opt.smartindent = true
 vim.opt.fileformat = "unix"
+
+vim.keymap.set("n", "<leader>b", "Ofrom pudb import set_trace; set_trace()<Esc>") 
