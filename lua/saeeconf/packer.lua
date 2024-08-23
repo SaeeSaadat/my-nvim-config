@@ -31,4 +31,6 @@ return require('packer').startup(function(use)
   use({'hrsh7th/nvim-cmp'})
   use({'hrsh7th/cmp-nvim-lsp'})
 
+  use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
+
 end)
