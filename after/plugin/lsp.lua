@@ -1,4 +1,4 @@
---[[ local lsp_zero = require('lsp-zero')
+local lsp_zero = require('lsp-zero')
 
 -- lsp_attach is where you enable features that only work
 -- if there is a language server active in the file
@@ -26,7 +26,7 @@ lsp_zero.extend_lspconfig({
 
 
 require('lspconfig').lua_ls.setup({})
-require('lspconfig').pyright.setup({})
+require('lspconfig').pylsp.setup({})
 
 local cmp = require('cmp')
 
@@ -41,4 +41,4 @@ cmp.setup({
     end,
   },
   mapping = cmp.mapping.preset.insert({}),
-}) ]]
+})
