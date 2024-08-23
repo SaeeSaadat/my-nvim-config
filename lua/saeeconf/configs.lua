@@ -5,7 +5,7 @@ vim.opt.number = true
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
--- stuff from vahid's config
+-- stuff from Vahid's config
 vim.opt.textwidth=79
 vim.opt.tabstop=4
 vim.opt.softtabstop=4

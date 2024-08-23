@@ -33,4 +33,5 @@ return require('packer').startup(function(use)
 
   use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
 
+  use {"ggandor/leap.nvim", config = function() require("leap").create_default_mappings() end}
 end)
