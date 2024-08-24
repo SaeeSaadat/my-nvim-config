@@ -123,10 +123,13 @@ require("nvim-tree").setup({
     },
     renderer = {
         group_empty = true,
+        hidden_display = "none",
+        highlight_hidden = "none",
+        highlight_opened_files = "name",
     },
     filters = {
-        dotfiles = true,
-        git_ignored = false,
+        dotfiles = false,
+        git_ignored = true,
     },
     trash = {
         cmd = "trash",
