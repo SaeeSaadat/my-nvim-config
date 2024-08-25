@@ -29,17 +29,6 @@ vim.keymap.set("n", "<leader>z",
     "<cmd>lua require'centerpad'.toggle { leftpad = 20, rightpad = 20 } <cr>",
     { silent = true, noremap = true })
 
--- Quote Encapsulate
-vim.keymap.set("n", "<leader>'",
-    "ciw'<C-r>\"'<Esc>", {silent = true, noremap = true })
-
-
-vim.keymap.set({"v", "x"}, "<leader>'",
-    "c'<C-r>\"'<Esc>", {silent = true, noremap = true })
-
-vim.keymap.set("n", "<leader>\"",
-    "ciw\"<C-r>\"\"<Esc>", {silent = true, noremap = true })
-
-vim.keymap.set({"v", "x"}, "<leader>\"",
-    "c\"<C-r>\"\"<Esc>", {silent = true, noremap = true })
-
+vim.keymap.set("n", "<leader><tab>", "<cmd>bnext<cr>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader><S-tab>", "<cmd>bprev<cr>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>x", "<cmd>bd<cr>", { noremap = true, silent = true })
