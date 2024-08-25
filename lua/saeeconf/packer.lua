@@ -34,4 +34,8 @@ return require('packer').startup(function(use)
   use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
 
   use {"ggandor/leap.nvim", config = function() require("leap").create_default_mappings() end}
+
+  -- use "folke/which-key.nvim"
+
+  use "smithbm2316/centerpad.nvim"
 end)
