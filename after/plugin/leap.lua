@@ -1,3 +1,5 @@
+require('leap')
+
 vim.keymap.set('n',        'f', '<Plug>(leap)')
 vim.keymap.set('n',        'F', '<Plug>(leap-from-window)')
 vim.keymap.set({'x', 'o'}, 'f', '<Plug>(leap-forward)')

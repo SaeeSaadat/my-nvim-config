@@ -15,7 +15,7 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- remove highlight with escape
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>") -- un-highlight after search!
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 vim.keymap.set("n", ";", ":")
 
@@ -25,4 +25,21 @@ vim.keymap.set("n", "<C-K>", "<C-w><C-k>")
 vim.keymap.set("n", "<C-H>", "<C-w><C-h>")
 vim.keymap.set("n", "<C-L>", "<C-w><C-l>")
 
-vim.keymap.set("n", "<leader>wk", "lua require('which-key').setup {}")
+vim.keymap.set("n", "<leader>z",
+    "<cmd>lua require'centerpad'.toggle { leftpad = 20, rightpad = 20 } <cr>",
+    { silent = true, noremap = true })
+
+-- Quote Encapsulate
+vim.keymap.set("n", "<leader>'", 
+    "ciw'<C-r>\"'<Esc>", {silent = true, noremap = true })
+
+
+vim.keymap.set({"v", "x"}, "<leader>'", 
+    "c'<C-r>\"'<Esc>", {silent = true, noremap = true })
+
+vim.keymap.set("n", "<leader>\"", 
+    "ciw\"<C-r>\"\"<Esc>", {silent = true, noremap = true })
+
+vim.keymap.set({"v", "x"}, "<leader>\"", 
+    "c\"<C-r>\"\"<Esc>", {silent = true, noremap = true })
+
