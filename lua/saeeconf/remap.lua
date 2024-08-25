@@ -1,8 +1,8 @@
 vim.g.mapleader = " "
 
 -- Move highlighted line
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 
 -- Go to next, but keep cursor in the middle
 vim.keymap.set("n", "n", "nzzzv")
@@ -30,16 +30,16 @@ vim.keymap.set("n", "<leader>z",
     { silent = true, noremap = true })
 
 -- Quote Encapsulate
-vim.keymap.set("n", "<leader>'", 
+vim.keymap.set("n", "<leader>'",
     "ciw'<C-r>\"'<Esc>", {silent = true, noremap = true })
 
 
-vim.keymap.set({"v", "x"}, "<leader>'", 
+vim.keymap.set({"v", "x"}, "<leader>'",
     "c'<C-r>\"'<Esc>", {silent = true, noremap = true })
 
-vim.keymap.set("n", "<leader>\"", 
+vim.keymap.set("n", "<leader>\"",
     "ciw\"<C-r>\"\"<Esc>", {silent = true, noremap = true })
 
-vim.keymap.set({"v", "x"}, "<leader>\"", 
+vim.keymap.set({"v", "x"}, "<leader>\"",
     "c\"<C-r>\"\"<Esc>", {silent = true, noremap = true })
 

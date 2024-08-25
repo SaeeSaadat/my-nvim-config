@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
 
   use 'nvim-tree/nvim-tree.lua'
 
-  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+  -- use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
   use 'williamboman/mason.nvim'
 
@@ -40,4 +40,23 @@ return require('packer').startup(function(use)
   use "smithbm2316/centerpad.nvim"
 
   use "tpope/vim-surround"
+
+  use "folke/noice.nvim"
+  use "rcarriga/nvim-notify"
+  use "MunifTanjim/nui.nvim"
+
+  use "nvim-lua/plenary.nvim"
+  use {
+      "ThePrimeagen/harpoon",
+      branch = "harpoon2",
+      requires = { {"nvim-lua/plenary.nvim"} }
+  }
+
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
+  use 'tpope/vim-fugitive'
+  use 'lewis6991/gitsigns.nvim'
 end)
