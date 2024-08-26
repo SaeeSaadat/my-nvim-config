@@ -17,7 +17,7 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 -- remove highlight with escape
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
-vim.keymap.set("n", ";", ":")
+vim.keymap.set({"n", "v"}, ";", ":")
 
 -- Window Navigation
 vim.keymap.set("n", "<C-J>", "<C-w><C-j>")
