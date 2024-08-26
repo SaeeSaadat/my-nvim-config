@@ -24,7 +24,11 @@ return require('packer').startup(function(use)
 
   -- use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
-  use 'williamboman/mason.nvim'
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+}
 
   use({'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'})
   use({'neovim/nvim-lspconfig'})
