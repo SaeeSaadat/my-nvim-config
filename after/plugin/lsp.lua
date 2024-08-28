@@ -29,15 +29,17 @@ lsp_zero.extend_lspconfig({
 })
 
 
-
-require('lspconfig').lua_ls.setup({})
-require('lspconfig').pylsp.setup({})
-
 local cmp = require('cmp')
 
 cmp.setup({
   sources = {
     {name = 'nvim_lsp'},
+    {
+        name = 'buffer',
+        options = {
+            keyword_length = 4
+        }
+    },
   },
   snippet = {
     expand = function(args)

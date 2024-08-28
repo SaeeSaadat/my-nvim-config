@@ -32,3 +32,5 @@ vim.keymap.set("n", "<leader>z",
 vim.keymap.set("n", "<leader><tab>", "<cmd>bnext<cr>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader><S-tab>", "<cmd>bprev<cr>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>x", "<cmd>bd<cr>", { noremap = true, silent = true })
+
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })

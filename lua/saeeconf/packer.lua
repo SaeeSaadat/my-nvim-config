@@ -63,4 +63,8 @@ return require('packer').startup(function(use)
 
   use 'tpope/vim-fugitive'
   use 'lewis6991/gitsigns.nvim'
+
+  use 'christoomey/vim-tmux-navigator'
+
+  use 'vim-test/vim-test'
 end)

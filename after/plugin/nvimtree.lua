@@ -136,7 +136,7 @@ require("nvim-tree").setup({
     },
 })
 
-vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<cr>', {silent = true, noremap = true})
+-- vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<cr>', {silent = true, noremap = true})
 -- vim.keymap.set('n', '<leader>e', ':NvimTreeFocus<cr>', {silent = true, noremap = true})
 vim.keymap.set('n', '<leader>e', ':NvimTreeFindFile<cr>', {silent = true, noremap = true})
 -- vim.keymap.set('n', '<M-f>', ':NvimTreeFindFile<cr>', {silent = true, noremap = true})
