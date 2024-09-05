@@ -34,3 +34,6 @@ vim.keymap.set("n", "<leader><S-tab>", "<cmd>bprev<cr>", { noremap = true, silen
 vim.keymap.set("n", "<leader>x", "<cmd>bd<cr>", { noremap = true, silent = true })
 
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
+
+-- 3rd parties that don't have a `after` file!
+vim.g.tmux_navigator_save_on_switch = 1  -- Auto save for tmux_navigator
