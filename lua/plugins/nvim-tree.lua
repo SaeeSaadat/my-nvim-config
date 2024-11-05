@@ -1,4 +1,3 @@
--- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -106,39 +105,45 @@ local function on_attach(bufnr)
 
 end
 
-
--- OR setup with some options
-require("nvim-tree").setup({
-    on_attach = on_attach,
-    actions = {
-        open_file = {
-            quit_on_open = true
-        },
-    },
-    sort = {
-        sorter = "case_sensitive",
-    },
-    view = {
-        width = 30,
-    },
-    renderer = {
-        group_empty = true,
-        hidden_display = "none",
-        highlight_hidden = "none",
-        highlight_opened_files = "name",
-    },
-    filters = {
-        dotfiles = false,
-        git_ignored = true,
-    },
-    trash = {
-        cmd = "trash",
-    },
-})
-
--- vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<cr>', {silent = true, noremap = true})
--- vim.keymap.set('n', '<leader>e', ':NvimTreeFocus<cr>', {silent = true, noremap = true})
 vim.keymap.set('n', '<leader>e', ':NvimTreeFindFile<cr>', {silent = true, noremap = true})
--- vim.keymap.set('n', '<M-f>', ':NvimTreeFindFile<cr>', {silent = true, noremap = true})
 
 
+return {
+    {
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        lazy = false,
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+        opts = {
+
+            on_attach = on_attach,
+            actions = {
+                open_file = {
+                    quit_on_open = true
+                },
+            },
+            sort = {
+                sorter = "case_sensitive",
+            },
+            view = {
+                width = 30,
+            },
+            renderer = {
+                group_empty = true,
+                hidden_display = "none",
+                highlight_hidden = "none",
+                highlight_opened_files = "name",
+            },
+            filters = {
+                dotfiles = false,
+                git_ignored = false,
+            },
+            trash = {
+                cmd = "trash",
+            },
+        }
+    },
+
+}
