@@ -39,8 +39,8 @@ return {
             {"<leader><enter>", function() local harpoon = require("harpoon") harpoon.ui:toggle_quick_menu(harpoon:list()) end, desc = "harpoon quick menu", },
 
             -- Toggle previous & next buffers stored within Harpoon list
-            -- {"n", "<leader>[", function() require("harpoon"):list():prev() end},
-            -- {"n", "<leader>]", function() require("harpoon"):list():next() end},
+            {"<leader>[", function() require("harpoon"):list():prev() end},
+            {"<leader>]", function() require("harpoon"):list():next() end},
         }
     },
     {
