@@ -85,7 +85,7 @@ return {
             })
 
             require("mason-lspconfig").setup({
-                ensure_installed = { "pylsp", "lua_ls" },
+                ensure_installed = { "pylsp", "lua_ls", "ruff"},
                 automatic_installation = true,
                 handlers = {
                     -- this first function is the "default handler"

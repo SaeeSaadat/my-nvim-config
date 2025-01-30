@@ -32,8 +32,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 
--- require'lspconfig'.pyright.setup{}
-
+require('lspconfig').ruff.setup({
+  init_options = {
+    settings = {
+        logLevel = 'debug',
+    }
+  }
+})
 
 
 -- CMP
