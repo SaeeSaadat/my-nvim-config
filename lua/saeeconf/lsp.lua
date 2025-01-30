@@ -32,9 +32,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 
-require'lspconfig'.pyright.setup{}
-
-
+-- require'lspconfig'.pyright.setup{}
 
 
 
