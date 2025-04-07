@@ -11,11 +11,7 @@ In case I magically got really good at this stuff or I just want to understand
 what the hell I've done in the future, here's a quick explanation on what
 everything is:
 
-
-### Package manager
-So I use Packer as my package manager. Every dependency is defined in 
-`lua/saeeconfig/packer.lua`
-and then the setup part is done in 
-`after/{packagename}.lua`
+# Lazy package manager
+I use lazy. It should install on its own so no worries there :)
 
 simple as that!
